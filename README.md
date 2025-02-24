@@ -6,7 +6,7 @@ Este repositorio contiene los proyectos que he desarrollado a lo largo de mi for
 ```
 /Frontend-Proyectos/   #Aqui iran solo aquellos puros de FrontEnd
   /CSS-Proyectos/
-      ├── Proyecto-01-Header-Business-Agency/
+      ├── Proyecto-01-Header-Business-Agency/ #No del todo Responsive
       ├── Proyecto-02-...
   /JavaScript-Proyectos/
       ├── Proyecto-01-...

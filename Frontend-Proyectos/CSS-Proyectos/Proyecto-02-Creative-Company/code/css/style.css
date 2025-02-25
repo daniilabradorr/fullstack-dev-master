@@ -1,0 +1,175 @@
+:root {
+  --color-blue: #515DEF;
+  --color-black: #333333;
+  --color-grey: #909090;
+  --color-white: #FBFBFB;
+  --font-primary: 'Poppins', sans-serif;
+}
+
+body{
+  background-image: url(../img/grupo@2x.jpg);
+  background-position: top right -100px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-color: var(--color-blue);
+  font-family: var(--font-primary);
+  margin: 0;
+  padding: 0;
+}
+
+
+.Page{
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+header.main-header {
+  padding-top: 33px;
+  padding-bottom: 33px;
+  display: flex;
+  align-items: center;
+  gap: 148px;
+  margin-bottom: 30px;
+}
+
+header.main-header a figcaption{
+  display: none;
+}
+
+nav.main-menu {
+  width: 100%;
+}
+
+nav.main-menu ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  list-style: none;
+}
+
+nav.main-menu ul a{
+  text-decoration: none;
+}
+
+nav.main-menu ul li:last-child{
+  margin-left: auto;
+  margin-right: 10px;
+
+}
+
+nav.main-menu ul li:last-child > a{
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: var(--color-blue);
+}
+
+nav.main-menu ul li:last-child a:hover {
+  color: var(--color-blue);
+  background-color: var(--color-white);
+  text-decoration: none;
+}
+
+nav.main-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}
+
+/* SE PODRÍA DEJAR UNA LÍNEA DEBAJO EN SU HOVER PERO NO ME LO PIDE
+
+nav.main-menu a:hover {
+  text-decoration: underline;
+
+}*/
+
+
+section.hero {
+  width: 55%;
+  color: white;
+  margin-bottom: 60px;
+}
+
+section.hero p.hero__inicio{
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+section.hero h1.hero_titulo{
+  font-size: 55px;
+  line-height: 1.2em;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+section.hero p.hero_subtitulo{
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+
+section.hero a.hero_boton {
+  padding: 10px 12px;
+  background-color: var(--color-white);
+  text-decoration: none;
+  color: var(--color-black);
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.4s
+}
+
+
+section.hero a.hero_boton:hover {
+  color:var(--color-white);
+  background-color: var(--color-black);
+}
+
+/*Para la flecha svg del boton del hero*/
+.hero_boton:hover svg path {
+  fill: var(--color-white);
+}
+
+
+section.categorias{
+  width: 90%;
+  box-sizing: border-box;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  padding: 30px 110px;
+  transform: translateX(-160px);
+}
+
+.category__icon {
+  width: 50px;
+
+}
+
+section.categorias h3 {
+  font-size: 16px;
+  color: var(--color-black);
+  font-weight: 850;
+}
+
+section.categorias p {
+  font-weight: 500;
+  color: var(--color-grey);
+  font-size: 16px;
+}
+
+footer{
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  text-align: center;
+  margin: 15px;
+  margin-bottom: 0;
+}

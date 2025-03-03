@@ -1,212 +1,4 @@
 @charset "UTF-8";
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/*
- * Hide visually and from screen readers
- */
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a, a:visited {
-    text-decoration: underline;
-  }
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after, a[href^="javascript:"]::after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  tr, img {
-    page-break-inside: avoid;
-  }
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2, h3 {
-    page-break-after: avoid;
-  }
-}
 /*
 * Aquí empieza el proyecto
 */
@@ -307,6 +99,19 @@ main {
   margin-bottom: 30px;
   padding-right: 40px;
   line-height: 65px;
+  position: relative;
+}
+.hero h1::after {
+  content: "";
+  background-image: url(img/Vector.svg);
+  background-size: contain; /* Para evitar recortes */
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0%; /* Lo coloca justo debajo del h1 */
+  left: 39%; /* Centra la imagen horizontalmente */
+  transform: translateX(-90%); /* Ajuste fino para centrar */
+  width: 205px; /* Tamaño de la imagen */
+  height: 70px; /* Tamaño de la imagen */
 }
 .hero p {
   color: #8e8e8e;
@@ -338,7 +143,7 @@ main {
 
 .featured {
   grid-column: 1/span 1;
-  padding-right: 30px;
+  padding-right: 35px;
 }
 .featured .titulo_featured {
   font-family: "Belgrano", serif;
@@ -350,9 +155,10 @@ main {
   align-items: center;
 }
 .featured .imgs_featured img {
-  width: 47%;
+  width: 48%;
   border: 1px solid #8e8e8e;
   padding: 3px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
 }
 
 .nft {
@@ -361,15 +167,30 @@ main {
   padding-left: 30px;
   padding-right: 30px;
 }
+.nft .imgContainer {
+  position: relative;
+}
 .nft .imgContainer img {
   max-width: 100%;
 }
 .nft .nft_data {
   background-color: white;
   padding: 16px;
-  margin-top: -30px;
+  margin-top: -70px;
   position: relative;
   margin-bottom: 35px;
+}
+.nft .nft_data::after {
+  content: "";
+  background-image: url(img/letras.png);
+  background-size: cover; /* Cambiado de cover a contain para que no se recorte */
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 15%;
+  right: -99; /* Acerca un poco más la imagen */
+  width: 155px; /* Reduce el ancho */
+  height: 665px; /* Reduce la altura */
+  transform: translateY(-55%);
 }
 .nft .header_nft_data {
   padding-bottom: 20px;

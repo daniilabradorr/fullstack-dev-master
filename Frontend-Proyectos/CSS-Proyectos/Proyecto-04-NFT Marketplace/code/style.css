@@ -1,0 +1,276 @@
+@charset "UTF-8";
+/*
+* Aquí empieza el proyecto
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  width: 40%;
+  background-color: #2e2f38;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header {
+  display: flex;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.main_header {
+  margin-left: 130px;
+}
+.main_header ul {
+  list-style: none;
+  display: flex;
+  gap: 45px;
+}
+.main_header ul a {
+  color: #2e2f38;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+aside.login {
+  margin-left: auto;
+}
+aside.login ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+aside.login ul a {
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.btn-login {
+  display: inline-block;
+  background-color: #fa504d;
+  padding: 8px 30px;
+  color: white;
+  text-decoration: none;
+}
+.btn-login:hover {
+  background-color: #8e8e8e;
+  color: #fa504d;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.hero {
+  grid-column: 1/span 1;
+  margin-bottom: 20px;
+  padding-top: 45px;
+}
+.hero h1 {
+  font-family: "Belgrano", serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  padding-right: 40px;
+  line-height: 65px;
+  position: relative;
+}
+.hero h1::after {
+  content: "";
+  background-image: url(img/Vector.svg);
+  background-size: contain; /* Para evitar recortes */
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0%; /* Lo coloca justo debajo del h1 */
+  left: 39%; /* Centra la imagen horizontalmente */
+  transform: translateX(-90%); /* Ajuste fino para centrar */
+  width: 205px; /* Tamaño de la imagen */
+  height: 70px; /* Tamaño de la imagen */
+}
+.hero p {
+  color: #8e8e8e;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.hero .botones_hero {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.hero .botones_hero a.btn-hero {
+  display: inline-block;
+  background-color: #fa504d;
+  padding: 8px 30px;
+  color: white;
+  text-decoration: none;
+  padding: 12px 50px;
+}
+.hero .botones_hero a.btn-hero:hover {
+  background-color: #8e8e8e;
+  color: #fa504d;
+}
+.hero .botones_hero a:last-child {
+  font-weight: 500;
+  color: #2e2f38;
+}
+
+.featured {
+  grid-column: 1/span 1;
+  padding-right: 35px;
+}
+.featured .titulo_featured {
+  font-family: "Belgrano", serif;
+  margin-bottom: 15px;
+}
+.featured .imgs_featured {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.featured .imgs_featured img {
+  width: 48%;
+  border: 1px solid #8e8e8e;
+  padding: 3px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+}
+
+.nft {
+  grid-column: 2/span 1;
+  grid-row: 1/span 2;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.nft .imgContainer {
+  position: relative;
+}
+.nft .imgContainer img {
+  max-width: 100%;
+}
+.nft .nft_data {
+  background-color: white;
+  padding: 16px;
+  margin-top: -70px;
+  position: relative;
+  margin-bottom: 35px;
+}
+.nft .nft_data::after {
+  content: "";
+  background-image: url(img/letras.png);
+  background-size: cover; /* Cambiado de cover a contain para que no se recorte */
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 15%;
+  right: -99; /* Acerca un poco más la imagen */
+  width: 155px; /* Reduce el ancho */
+  height: 665px; /* Reduce la altura */
+  transform: translateY(-55%);
+}
+.nft .header_nft_data {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.nft .nft_data_Owner {
+  display: flex;
+}
+.nft .nft_data_Owner .nft_data_Owner_DATA {
+  margin-left: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nft .nft_username {
+  color: #8e8e8e;
+  font-weight: 300;
+}
+.nft .nft_name {
+  font-weight: bold;
+}
+.nft .nft_price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nft .nft_price .ntf_price_current {
+  color: #8e8e8e;
+}
+.nft .nft_price .ntf_price_number {
+  font-size: 17px;
+  font-weight: bold;
+}
+.nft .nft_buttons {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.nft .nft_buttons .btn-nft {
+  display: inline-block;
+  background-color: #fa504d;
+  padding: 8px 30px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+.nft .nft_buttons .btn-nft:hover {
+  background-color: #8e8e8e;
+  color: #fa504d;
+}
+.nft .nft_buttons .btn-nft:last-child {
+  background-color: transparent;
+  color: #fa504d;
+}
+.nft .nft__numbers {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  font-weight: 300;
+  gap: 10px;
+}
+.nft .nft__number {
+  color: #fa504d;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+footer {
+  background-image: linear-gradient(to right, #fa504d, #2e2f38);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #b0b0b0;
+  text-align: center;
+  clear: both;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

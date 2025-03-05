@@ -1,0 +1,23 @@
+body{
+    @include breakpoint(tablet){
+        background-image: url(../img/mujer_tablet.png);
+        background-repeat: no-repeat;
+        background-position: 125% 0;
+        background-size: 400px;
+    }
+
+    @include breakpoint(tablethorizontal){
+        background-position: 130% 0;
+        background-size: 600px;
+    }
+
+    @include breakpoint(desktop){
+        background-position: 108% -20px;
+        background-size: 600px;
+    }
+
+    @include breakpoint(desktopxl){
+        background-position: 90% -20px;
+        background-size: 700px;
+    }
+}

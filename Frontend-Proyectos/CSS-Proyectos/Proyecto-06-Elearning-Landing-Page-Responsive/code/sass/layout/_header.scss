@@ -1,0 +1,21 @@
+header.header-principal{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    ul{
+        @include reset-list();
+        align-items: center;
+    }
+
+    @include breakpoint(tablethorizontal){
+        margin-bottom: 65px;
+    }
+
+    @include breakpoint(desktop){
+        margin-bottom: 20px;
+    }
+}

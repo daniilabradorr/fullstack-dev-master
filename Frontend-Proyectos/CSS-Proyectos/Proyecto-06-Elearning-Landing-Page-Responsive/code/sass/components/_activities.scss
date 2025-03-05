@@ -1,0 +1,79 @@
+.activities{
+    background: linear-gradient(180deg, #fff 0%,  #f0f1ff 100%);
+    padding-bottom: 40px;
+    @include breakpoint(tablet){
+        padding-bottom: 80px;
+    }
+    &__header{
+        background-image: $gradient-pink-orange;
+        padding: 25px 30px;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        @include breakpoint(tablet){
+            margin-bottom:0;
+        }
+    }
+
+    &__item{
+        padding: 1rem 2rem;
+        margin-bottom: 35px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 36px 28px 35px;
+        position: relative;
+        @include breakpoint(tablet){
+            margin-bottom:0;
+            padding: 36px 28px 15px;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        &-icon{
+            width: 56px;
+            height: 56px;
+            display: inline-block;
+            background: $gradient-pink-orange;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 20px;
+            top: -25px;
+        }
+        &-title{
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: $color-black;
+
+        }
+
+        &-description{
+            color: $color-grey;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &-cta{
+
+        }
+
+    }
+
+    .container{
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 30px;
+        }
+
+        @include breakpoint(tablethorizontal){
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 70px 35px;
+        }
+    }
+}

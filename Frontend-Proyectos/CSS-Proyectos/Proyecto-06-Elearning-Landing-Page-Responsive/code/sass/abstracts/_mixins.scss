@@ -1,0 +1,86 @@
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+
+@mixin reset-list() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+@mixin button($bg-color: $color-black, $color:white) {
+  display: inline-block;
+  font-weight: bold;
+  background-color: $bg-color;
+  color: $color;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 300;
+  text-decoration: none;
+  &:hover{
+    background-color: #666CA3;
+  }
+}
+
+@mixin button-gradiente-to-orange() {
+  @include button();
+  background-image: $gradient-pink-orange;
+  &:hover {
+    background: var(
+      --Gradient-1-Hover,
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+      ),
+      linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%)
+    );
+  }
+}
+
+
+@mixin button-gradiente-to-blue() {
+  @include button();
+  background-image: $gradient-pink-blue;
+  &:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+      ),
+      linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+  }
+}
+
+
+@mixin button-link(){
+  color: $color-rose;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}

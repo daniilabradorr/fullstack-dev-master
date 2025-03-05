@@ -1,0 +1,25 @@
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;
+
+
+$primary-font: "Plus Jakarta Sans", sans-serif;
+
+//Sizes container
+$max-width-container: 1350px;
+
+//Colores
+$color-background-html: #F0F1FF;
+$color-azul-oscuro: #666CA3;
+$color-black: #13183F;
+$blue-dark: #4851ff;
+$color-grey: #83869A;
+$color-orange: #F74780;
+$color-orange-f: #FF6F48;
+$color-rose: #FFA7C3;
+$color-white: #FFFFFF;
+$magenta: #f02aa6;
+
+$gradient-pink-orange: linear-gradient(180deg, $color-orange-f 0.04%, $magenta 100%);
+$gradient-pink-blue: linear-gradient(180deg, $blue-dark 0%, $magenta 99.92%);

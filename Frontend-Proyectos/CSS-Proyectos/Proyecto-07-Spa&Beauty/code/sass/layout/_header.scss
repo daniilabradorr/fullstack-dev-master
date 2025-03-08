@@ -109,6 +109,12 @@
       margin-top: 1rem;
     }
   }
+  @media (max-width: 1000px) {
+    .nav-secundario ul li a {
+      font-size: 12px; /* Reducir el tamaño de la fuente */
+      padding: 0.5rem 0.5rem; /* Reducir el padding de los botones */
+    }
+  }
 }
 
 // Estilo para el menú hamburguesa

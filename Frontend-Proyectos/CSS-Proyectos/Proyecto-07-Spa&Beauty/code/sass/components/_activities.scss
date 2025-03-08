@@ -1,0 +1,43 @@
+.activities {
+    margin-left: 35px;
+    z-index: 2;
+    position: relative;
+    margin-top: 10px; // Esto baja toda la sección un
+    
+    .container {
+        width: 33%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto; // Centra horizontalmente
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8); 
+        position: relative; 
+        top: 40px; // Baja el contenedor para que toque el footer
+        border-radius: 16px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        justify-items: center;
+        left: -25%;
+    }
+
+    article {
+        padding: 15px;
+        background: transparent;
+        justify-items: center;
+        text-align: center;
+    }
+
+    img {
+        border-radius: 50px;
+        background-color: $color-verde-oscuro;
+    }
+
+    p.__title {
+        font-size: 18px;
+        background: transparent;
+    }
+
+    p.__subtitle {
+        font-size: 14px;
+        background: transparent;
+    }
+}

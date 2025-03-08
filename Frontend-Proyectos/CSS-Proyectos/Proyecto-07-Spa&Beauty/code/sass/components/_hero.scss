@@ -1,0 +1,162 @@
+.hero {
+    margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+    overflow: hidden; // Asegura que las imágenes no se desborden fuera del área del hero
+}
+
+.hero__content {
+    .hero__title {
+        width: 500px;
+        margin-left: 10px;
+        margin-bottom: 30px;
+        color: $color-azul-oscuro;
+    }
+
+    .hero__subtitle {
+        width: 500px;
+        margin-left: 10px;
+        margin-bottom: 40px;
+        color: $color-subtitulo;
+    }
+
+    .hero__buttons {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 20px;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.hero__img {
+    position: relative;
+
+    .vector {
+        position: fixed;
+        height: 100vh;
+        width: 38%;
+        right: 0;
+        left: 67%;
+        top: 10%;
+        z-index: 1;
+        background-color: $color-verde-oscuro;
+        border-radius: 10px;
+    }
+
+    .mujer {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 3%;
+        left: 15%;
+        background: transparent;
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero__aside-1,
+    .hero__aside-2 {
+        position: fixed;
+        width: 250px;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+
+        img {
+            position: relative;
+            align-self: flex-start;
+            margin-bottom: 5px;
+            width: 20px;
+            height: auto;
+            background: transparent;
+        }
+
+        span {
+            text-align: center;
+            font-size: 14px;
+            background: transparent;
+            color: black;
+        }
+
+        .hero__number-number {
+            color: $color-azul-oscuro;
+            font-weight: bold;
+        }
+    }
+
+    .hero__aside-1 {
+        right: 5%;
+        top: 50%;
+    }
+
+    .hero__aside-2 {
+        right: 1%;
+        top: 20%;
+    }
+}
+
+// Media Queries para móviles
+@media (max-width: 700px) {
+    .hero {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hero__content {
+        .hero__title,
+        .hero__subtitle {
+            font-size: 1.5rem; // Ajusta el tamaño de la fuente en pantallas pequeñas
+            width: 100%; // Asegura que ocupen todo el ancho
+            margin-bottom: 20px; // Ajusta el margen
+        }
+
+        .hero__buttons {
+            flex-direction: column; // Apila los botones verticalmente
+            gap: 15px; // Ajusta el espacio entre botones
+        }
+    }
+
+    .hero__img {
+        .vector {
+            display: none; // Oculta el vector en móviles
+        }
+
+        .mujer {
+            position: relative;
+            height: 40vh; // Ajusta la altura para móviles
+            top: 0;
+            left: 0;
+        }
+
+        .hero__aside-1,
+        .hero__aside-2 {
+            position: relative; // Cambia a posición relativa
+            width: 100%; // Hace que los aside ocupen todo el ancho
+            height: 100px; // Ajusta la altura
+            margin-top: 10px; // Ajusta el margen superior
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.nav-principal{
+    display: flex;
+    justify-items: center;
+}
+
+
+.nav-secundario{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .iconos-aside a{
+        list-style: none;
+        text-decoration: none;
+    }
+}

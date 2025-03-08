@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Daniel Labrador Benito">
+    <title>CSS Proyectos 07 - Header Spa & Beauty</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header-principal">
+        <div class="container">
+            <a class="logo-p" href="#">
+                <img src="img/logo-GlowQueen.svg" alt="Logo Empresa">
+            </a>
+
+            <!-- Botón para menú hamburguesa en móvil/tableta -->
+            <button class="menu-button">☰</button>
+            
+            <nav class="nav-principal">
+                <ul>
+                    <li><a class="home" href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Facilities</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+                <img src="img/down.svg" alt="">
+            </nav>
+
+            <aside class="nav-secundario">
+                <div class="iconos-aside">
+                    <a href="#"><img src="img/lupa-icon.svg" alt=""></a>
+                    <a href="#"><img src="img/carrito-icon.svg" alt=""></a>
+                </div>
+
+                <ul>
+                    <li><a href="#">Sign in</a></li>
+                    <li><a class="button" href="#">Sign Up</a></li>
+                </ul>
+            </aside>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Bring back the beauty and glow of your skin</h1>
+                <p class="hero__subtitle">We provide you various treatments from head to toe using the best product, advanced technology, and affordable price</p>
+                <div class="hero__buttons">
+                    <a href="#" class="button">Book Now</a>
+                    <a href="#">
+                        <img src="img/play.svg" alt=""> Watch Video
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero__img">
+                <img class="vector" src="img/Vector.svg" alt="Vector Image">
+                <img class="mujer" src="img/mujer.png" alt="Woman Image">
+                <section class="hero__aside hero__aside-1">
+                    <img src="img/comilla.svg" alt="Quote Icon">
+                    <span class="hero__number-title">I have a regular schedule to take treatment from GlowQueen, they gave me the best service and treatment ever to maintain the beauty and health of my skin</span>
+                    <span class="hero__number-number">Sophia Princeton</span>
+                </section>
+                <section class="hero__aside hero__aside-2">
+                    <img src="img/comilla.svg" alt="Quote Icon">
+                    <span class="hero__number-title">For the past few years, I've had a hard time finding the right place for skin care to deal with my complicated skin condition, thank God I found GlowQueen to treat my skin</span>
+                    <span class="hero__number-number">Tamara Jules</span>
+                </section>
+            </div>
+        </div>
+        
+        <section>
+            <div class="activities">
+                <div class="container">
+                    <article class="plus15">
+                        <img src="img/15+.svg" alt="">
+                        <p class="__title">15+</p>
+                        <p class="__subtitle">Special Treatment</p>
+                    </article>
+
+                    <article class="plus25">
+                        <img src="img/25+.svg" alt="">
+                        <p class="__title">25+</p>
+                        <p class="__subtitle">Professional Therapist</p>
+                    </article>
+
+                    <article class="hundred">
+                        <img src="img/100.svg" alt="">
+                        <p class="__title">100%</p>
+                        <p class="__subtitle">Herbal Cream Formula</p>
+                    </article>
+                </div>
+            </div>
+        </section>  
+    </main>
+
+    <footer></footer>
+
+    <script type="module" src="/main.js"></script>
+
+    <!-- He añadido este script para manejar el menú de navegación (se que no hace falta pero me apatecía practicarlo) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.menu-button');
+            const navPrincipal = document.querySelector('.nav-principal');
+
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    navPrincipal.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

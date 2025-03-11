@@ -1,0 +1,94 @@
+header.header-principal {
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-principal ul {
+        @include reset-list();
+        align-items: center;
+        
+        a {
+            font-family: $secondary-font;
+            color: $color-navbar_options;
+            text-decoration: none;
+
+            &.active,
+            &:hover {
+                color: $color-rojo;
+                position: relative;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    background-color: $color-rojo;
+                    width: 80%;
+                    bottom: -10px;
+                    left: 10%;
+                }
+            }
+        }
+    }
+
+    // Media query para móviles (usando el mixin)
+    @include breakpoint(mobile) {
+        margin-top: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center; // Asegura que el contenido esté centrado
+            margin-left: 0;
+        }
+
+        // Logotipo encima del navbar
+        .logo {
+            margin-bottom: 10px;
+        }
+
+        .nav-principal ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;  // Espaciado entre los enlaces
+        }
+
+        .nav-principal ul a {
+            font-size: 14px; // Reduce el tamaño del texto en móvil
+        }
+    }
+
+    // Media query para desktopXL (usando el mixin)
+    @include breakpoint(desktopxl) {
+        margin-top: 30px;
+        padding-top: 20px;  // Reducir padding superior para menos espacio
+        padding-bottom: 20px;  // Reducir padding inferior
+        margin-bottom: 20px;  // Reducir margen inferior
+
+        .container {
+            justify-content: center;  // Ajustar para que todo quede alineado a la izquierda
+            padding-left: 20px;  // Reducir espacio a la izquierda
+            padding-right: 20px;  // Asegura que haya algo de espacio a la derecha
+            gap: 90px;
+        }
+
+        .nav-principal ul {
+            display: flex;
+            justify-content: flex-start;  // Alineación de los elementos de la barra de navegación
+            gap: 20px;  // Espaciado entre los enlaces
+
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+}

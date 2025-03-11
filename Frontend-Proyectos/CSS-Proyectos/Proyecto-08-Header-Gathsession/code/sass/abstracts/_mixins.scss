@@ -1,0 +1,59 @@
+// Mixins de media queries
+@mixin breakpoint($bp) {
+  @if $bp == mobile {
+    @media (max-width: $bp-mobile) {
+      @content;
+    }
+  }
+
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+  @else if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+  @else if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+  @else if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+// Reset listas
+@mixin reset-list() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+// Botón reutilizable
+@mixin button($bg-color: $color-rojo, $color: white) {
+  display: inline-block;
+  font-weight: bold;
+  background-color: $bg-color;
+  color: $color;
+  padding: 15px 40px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-weight: 200;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: $secondary-font;
+
+  &:hover {
+    background-color: #FFFFFF40;
+  }
+}

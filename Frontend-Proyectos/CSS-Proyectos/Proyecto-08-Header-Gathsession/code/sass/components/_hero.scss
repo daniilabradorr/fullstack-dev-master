@@ -1,0 +1,197 @@
+.hero {
+    position: relative;
+    display: flex;
+    gap: 20px;
+
+    &__content {
+        width: 50%;
+        margin-bottom: 40px;
+        margin-right: 10px;
+
+        .hero__title {
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            font-size: 60px;
+        }
+
+        .hero__subtitle {
+            color: $color-subtitulo;
+            font-family: $secondary-font;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 30px;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .hero__buttons{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            gap: 30px;
+            .flecha{
+                display: flex;
+                justify-items: center;
+                align-items: center;
+            }
+            a{
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                color: white;
+            }
+            .hero_boton-flecha{
+                svg{
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+
+
+    &__img {
+        background-image: url("../img/eclipse.png");
+        background-size: cover;  // Mantiene la imagen cubriendo el área sin deformarse
+        background-position: center center; // Centra la imagen tanto horizontal como verticalmente
+        background-repeat: no-repeat;  // Evita que se repita la imagen
+        width: 50%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 200px); //  Filas uniformes de 150px
+        gap: 10px;
+        margin-bottom: 0;
+        
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px; //  Menos curvatura para evitar deformaciones
+            overflow: hidden;
+            padding: 0;
+            margin: 5px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        //  Primera columna
+        .img-1 {
+            img{
+                background-color: #6E1FED;
+            }
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+
+        .img-2 {
+            img{
+                background: #DB2A6B;
+            }
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+
+        // 🔹 Segunda columna
+        .img-3 {
+            img{
+                background: #60D3D9;
+            }
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .img-4 {
+            img{
+                background: #FF7E29;
+            }
+            grid-column: 2 / 3;
+            grid-row: 2 / 4;
+        }
+
+        //  Última columna (ahora la imagen 5 tiene la misma altura que las otras)
+        .img-5 {
+            img{
+                background: #F4B840;
+            }
+            grid-column: 3 / 4;
+            grid-row: 1 / 4; // Ahora ocupa 2 filas para equilibrar el diseño
+            height: 400px; //  Ajuste manual (2/3 de 200px)
+            align-self: center;
+        }
+    }
+
+
+    &__info{
+        display: flex;
+        position: absolute;
+        top: 80%;
+        div{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            img{
+                border-radius: 10px;
+                padding: 5px;
+                background-color: #FFFFFF40;
+            }
+            p{
+                margin-left: 15px;
+                width: 110px;
+                font-size: 18px;
+                margin-right: 15px;
+                color: white;
+                font-family: $secondary-font;
+                font-weight: 500;
+            }
+        }
+        
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+
+        &__content {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        &__img {
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr); // 3 columnas en móvil
+            grid-template-rows: repeat(2, 200px); // 2 filas en lugar de 3
+            gap: 15px; 
+            margin-bottom: 10px;
+
+            .img-1, .img-2, .img-3, .img-4, .img-5 {
+                grid-column: span 1; 
+                grid-row: auto;
+                margin: 0 auto;
+            }
+
+            .img-5 {
+                height: 200px; 
+            }
+        }
+
+        &__info {
+            position: relative;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px; // Separación adicional
+        }
+
+        .hero__buttons {
+            margin-top: 20px; // Separación entre botones y la imagen
+        }
+    }
+    
+}
+

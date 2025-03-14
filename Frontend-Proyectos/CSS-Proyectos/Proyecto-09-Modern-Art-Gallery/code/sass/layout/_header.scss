@@ -1,0 +1,285 @@
+header {
+    figure {
+        img {
+            width: 100%;
+        }
+        figcaption {
+            display: none;
+        }
+        margin-bottom: 1.875rem;
+    }
+
+    div.header__content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        
+        h1, p {
+            width: 21.4375rem;
+        }
+
+        h1 {
+            font-size: 4.125rem;
+            line-height: 3.75rem;
+            margin-bottom: 1.5625rem;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            color: $color-gris-oscuro;
+            margin-bottom: 1.875rem;
+        }
+    }
+
+    .header__button {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1.875rem;
+    
+        a.boton {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            width: 100%;
+            transition: background 0.3s ease;
+            width: 16.25rem;
+    
+            .boton__texto {
+                flex: 7;
+                background: $color-negro;
+                padding: 0.625rem 0.9375rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 2.625rem;
+    
+                p {
+                    color: white;
+                    margin: 0;
+                    font-size: 1.25rem;
+                    font-weight: 800;
+                    line-height: 1.5rem;
+                }
+            }
+    
+            .flecha {
+                flex: 3; 
+                background: $color-naranja-apagado; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 3.875rem;
+                transition: background 0.3s ease;
+    
+                img {
+                    padding: 1.25rem;
+                    width: 90%;
+                    height: 60%;
+                    transition: filter 0.3s ease;
+                }
+            }
+    
+            &:hover .flecha {
+                background: $color-negro; 
+            }
+
+            &:hover .boton__texto {
+                background: $color-naranja-apagado;
+            }
+        }
+    }
+
+    @include breakpoint(tablet) {
+        picture {
+            img {
+                height: 40rem;
+                width: 27.3125rem;
+                margin-bottom: 9.75rem;
+            }
+        }
+
+        .header__content {
+            position: absolute;
+            top: 9.0625rem;
+            left: 24.3125rem;
+        }
+
+        .header__button {
+            position: absolute;
+            top: 27.5rem;
+            left: 24.3125rem;
+        }
+    }
+
+    @include breakpoint(desktop) {
+        display: flex;
+        justify-content: center;
+        
+        .header__desktop::before {
+            content: "";
+            left: 0;
+            background-color: black;
+            width: 50%;
+            position: absolute;
+            height: 100%;
+        }
+    
+        figure {
+            position: relative;
+            margin-bottom: 1.875rem;
+        }
+    
+        figure img {
+            width: 33.75rem;  
+            height: 50rem;
+            object-fit: cover;
+            margin-bottom: 11.25rem;
+            padding-bottom: 0;
+        }
+    
+        .header__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: absolute;
+            top: 9.0625rem;
+            left: 10%;
+            z-index: 1;
+            width: 50%;
+            color: white;
+        }
+    
+        .header__content h1 {
+            width: 32.125rem;
+            height: 11rem;
+            font-size: 6.25rem;
+            line-height: 5.5rem;
+            font-weight: 900;
+            color: white;
+            z-index: 1;
+        }
+    
+        .header__content p {
+            position: absolute;
+            display: flex;
+            left: 110%;
+            font-size: 1.375rem;
+            font-family: $secondary-font;
+            line-height: 2rem;
+            font-weight: 400;
+            margin-bottom: 1.25rem;
+        }
+    
+        .header__button {
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            left: 65%;
+            top: 40%;
+            z-index: 1;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        .header__button_location {
+            position: absolute;
+            margin-left: 0;
+            left: 5%;
+            a.boton {
+                width: 18.75rem;
+            }
+        }
+    }
+
+    .header__button_location {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+        margin-bottom: 1.875rem;
+    
+        a.boton {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            width: 100%;
+            transition: background 0.3s ease;
+            width: 16.25rem;
+    
+            .boton__texto {
+                flex: 7;
+                background: $color-negro;
+                padding: 0.625rem 0.9375rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 2.625rem;
+    
+                p {
+                    color: white;
+                    margin: 0;
+                    font-size: 1.25rem;
+                    font-weight: 800;
+                    line-height: 1.5rem;
+                }
+            }
+    
+            .flecha {
+                flex: 3; 
+                background: $color-naranja-apagado; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 3.875rem;
+                transition: background 0.3s ease;
+            }
+    
+            &:hover .flecha {
+                background: $color-negro;
+            }
+
+            &:hover .boton__texto {
+                background: $color-naranja-apagado;
+            }
+        }
+    }
+
+    @include breakpoint($bp-tablet-horizontal) {
+        .header__content {
+            top: 10rem;
+            left: 20%;
+            width: 60%;
+        }
+
+        figure img {
+            width: 40rem;
+            height: 60rem;
+        }
+
+        .header__button {
+            left: 22%;
+            top: 35%;
+        }
+    }
+
+    @include breakpoint($bp-desktop-xl) {
+        .header__content {
+            top: 12rem;
+            left: 15%;
+            width: 45%;
+        }
+
+        figure img {
+            width: 50rem;
+            height: 70rem;
+        }
+
+        .header__button {
+            left: 25%;
+            top: 38%;
+        }
+    }
+}

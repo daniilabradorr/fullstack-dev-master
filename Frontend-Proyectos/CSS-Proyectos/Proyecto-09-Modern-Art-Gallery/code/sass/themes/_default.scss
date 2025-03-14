@@ -1,0 +1,16 @@
+html * {
+  font-family: $primary-font;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $color-background-html;
+
+}
+
+img{
+  max-width: 100%;
+}

@@ -1,0 +1,6 @@
+1-.Terminar location DESKTOP
+2-.Realizar breakpoint tablethrizontal
+3-.Realizar breakpoint desktopXL
+4-.Revisar + Subir proyecto a a GitHub y GitHub Pages
+5-.Subir publicaciones
+6-.Empezar nuevo proyecto

@@ -1,0 +1,98 @@
+.hero__footer {
+    .hero__footer-container {
+        background-color: $color-negro;
+        padding-left: 1.875rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        h2, p {
+            width: 18.4375rem;
+            color: white;  
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 3.125rem;
+            line-height: 2.8125rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            padding-top: 2.8125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            font-weight: 400;
+            padding-bottom: 2.8125rem;
+            font-family: $secondary-font;
+        }
+    }
+    margin-bottom: 7.5rem;
+
+    @include breakpoint(tablet) {
+        position: absolute;
+        top: 95.625rem;
+        left: 23.5rem;
+        .hero__footer-container {
+            height: 24.5625rem;
+            width: 18.75rem;
+            h2 {
+                font-size: 3.125rem;
+                font-weight: 900;
+                line-height: 2.8125rem;
+                width: 13.9375rem;
+                height: 5.625rem;
+                padding-top: 5.3125rem;
+            }
+            p {
+                width: 13.9375rem;
+                height: 7rem;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        top: 107.25rem;
+        left: 39.5rem;
+        .hero__footer-container {
+            height: 24.5rem;
+            width: 25.9375rem;
+        }
+    }
+
+    @include breakpoint($bp-tablet-horizontal) {
+        position: absolute;
+        top: 95.625rem;
+        left: 23.5rem;
+        .hero__footer-container {
+            height: 24.5625rem;
+            width: 18.75rem;
+            h2 {
+                font-size: 3.125rem;
+                font-weight: 900;
+                line-height: 2.8125rem;
+                width: 13.9375rem;
+                height: 5.625rem;
+                padding-top: 5.3125rem;
+            }
+            p {
+                width: 13.9375rem;
+                height: 7rem;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+        }
+    }
+
+    @include breakpoint($bp-desktop-xl) {
+        top: 107.25rem;
+        left: 39.5rem;
+        .hero__footer-container {
+            height: 24.5rem;
+            width: 25.9375rem;
+        }
+    }
+}

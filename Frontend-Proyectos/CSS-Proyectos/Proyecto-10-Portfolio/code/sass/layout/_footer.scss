@@ -1,0 +1,97 @@
+footer{
+    background-color: $color-negro-claro;
+    div.footer__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            width: 129px;
+            height: 32px;
+            font-size: 26px;
+            line-height: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        nav{
+            width: 153px;
+            ul{
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                @include reset-list();
+                margin-bottom: 50px;
+                a {
+                    transition: filter 0.3s ease, transform 0.2s ease;
+
+                }
+                a:hover img,
+                a:active img{
+                    filter: grayscale(0%) brightness(0) saturate(100%) invert(42%) sepia(94%) saturate(400%) hue-rotate(80deg); /* Cambia a verde */
+                    transform: scale(1.1); /* Pequeño efecto de zoom */
+                }
+            }
+        }
+    
+    }
+
+    @include breakpoint(tablet){
+        div.footer__content{
+            padding-bottom: 40px;
+            margin-left: 30px;
+            margin-right: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;
+            text-align: center;
+            align-items: center;
+
+
+            h3{
+                width: 172px;
+                height: 32px;
+                margin: 0;
+            }
+            nav{
+
+                width: 192px;
+                height: 25px;
+                ul{
+                    margin: 0;
+
+                }
+            } 
+        }
+        
+    }
+
+
+    @include breakpoint(tablethorizontal){
+        display: flex;
+        justify-content: center;
+        div.footer__content{
+            padding-bottom: 40px;
+            margin-left: 30px;
+            margin-right: 30px;
+            justify-content: center;
+            gap: 60%;
+            width: 100%;
+            h3{
+                width: 172px;
+                height: 32px;
+                margin: 0;
+            }
+            nav{
+
+                width: 192px;
+                height: 25px;
+
+                ul{
+                    margin: 0;
+
+
+                }
+            } 
+        }
+    }
+}

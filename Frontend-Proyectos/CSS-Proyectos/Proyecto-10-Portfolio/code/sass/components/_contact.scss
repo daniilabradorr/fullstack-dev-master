@@ -1,0 +1,169 @@
+section.contact{
+    background-color: $color-negro-claro;
+    .contact__container{
+        margin-left: 16px;
+        margin-right: 16px;
+        background-color: $color-negro-claro;
+        justify-items: center;
+        text-align: center;
+        padding-bottom: 25px;
+        h2{
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 40px;
+            letter-spacing: -1.14px;
+            width: 343px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+        p{
+            width: 343px;
+            height: 78px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+            margin-bottom: 50px;
+        }
+
+        .contact_form input,
+        .contact_form textarea {
+            width: 343px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid #FFFFFF; 
+            background: transparent; 
+            outline: none;
+            color: #FFFFFF; 
+            transition: border-color 0.3s ease; 
+
+            &:focus {
+                border-bottom: 2px solid #4EE1A0;
+            }
+    
+            &:user-valid {
+                border-bottom: 2px solid #4EE1A0;
+            }
+    
+            &:user-invalid {
+                border-bottom: 2px solid #FF0000;
+            }
+            &:invalid {
+                border-bottom: 2px solid #FF0000;
+            }
+
+        }
+
+        
+
+        .contact_form input::placeholder,
+        .contact_form textarea::placeholder {
+            color: #FFFFFF; /* Color del placeholder */
+            opacity: 0.6; /* Ligera transparencia */
+            font-weight: 500;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .contact_form textarea {
+            resize: none;
+            height: 80px;
+            margin-bottom: 30px;
+        }
+
+        .contact_form_button {
+            display: flex;
+            justify-self: end;
+            text-decoration: none !important;
+            color: #FFFFFF;
+            padding: 0;
+            padding-right: 0;
+            padding-bottom: 7px;
+            border-bottom: solid 2px #4EE1A0;
+            width: 120px;
+            font-weight: 650;
+            font-size: 16px;
+        }
+
+        .contact_form_button:hover, .contact_form_button:active, .contact_form_button:visited {
+            color: #4EE1A0;
+        }
+
+        img{
+            position: absolute;
+            left: 0;
+        }
+
+    }
+
+
+    @include breakpoint(tablet){
+        .contact__container{
+            h2{
+                font-size: 72px;
+                line-height: 72px;
+                letter-spacing: -2.05px;
+                margin-bottom: 20px;
+                height: 72px;
+            }
+
+            p{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0;
+                height: 84px;
+                margin-bottom: 45px;
+            }
+            .contact_form{
+                display: flex;
+                flex-direction: column;
+
+                .contact_form_button {
+                    display: flex;
+                    align-self: self-end;
+                    justify-self: end;
+                    text-decoration: none !important;
+                    color: #FFFFFF;
+                    padding: 0;
+                    padding-right: 0;
+                    padding-bottom: 7px;
+                    border-bottom: solid 2px #4EE1A0;
+                    width: 135px;
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                .contact_form_button:hover, .contact_form_button:active {
+                    color: #4EE1A0;
+                }
+
+                img{
+                    position: absolute;
+                    left: 0;
+                    top: 185rem;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(desktop){
+        .contact__container{
+            padding-top: 30px;
+            margin-left: 165px;
+            margin-right: 165px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+
+    @include breakpoint(desktopxl){
+        .contact__container{
+            display: flex;
+            justify-content: center;
+            gap: 500px;
+        }
+    }
+}

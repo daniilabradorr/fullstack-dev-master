@@ -1,0 +1,32 @@
+html * {
+  font-family: $primary-font;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $color-background-html;
+  color: $color-principal;
+
+
+}
+
+img{
+  max-width: 100%;
+}
+
+hr.line-divider{
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+hr.line-divider-tablet{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  @include breakpoint(tablet){
+    display: none;
+  }
+}

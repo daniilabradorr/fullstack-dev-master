@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academia Conquerblocks | Formación online</title>
+  <meta name="description" content="Descubre los mejores cursos tecnológicos en Conquer Academy. Aprende desarrollo web, inteligencia artificial, ciberseguridad y más, con programas prácticos y mentores expertos. Impulsa tu carrera en el mundo tech con nuestras formaciones flexibles y accesibles para todos los niveles.">
+  <meta name="author" content="Daniel Labrador Benito"> 
+
+  <!-- He realizado un Favicon personalizado para practicar solo en algunas páginas -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/favico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <header>
+    <div class="header__container">
+      <a class="logo-conquer" href="index.html">
+        <img class="img-logo-conquer" src="img/home/logotipo/logo-conquerblocks-color.png" alt="Logotipo de Conquerblocks">
+      </a>
+
+      <!-- Toggle del menú con checkbox -->
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+      <label for="menu-toggle" class="menu-toggle">&#9776;</label>
+
+      <nav class="navbar-principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="templates/generales/quienes_somos.html">Quiénes somos</a></li>
+          <li><a href="templates/cursos/cursos.html">Cursos</a></li>
+          <li><a href="templates/blog/blog.html">Blog</a></li>
+          <li><a href="templates/generales/registro.html">Registro</a></li>
+          <li><a href="templates/generales/login.html">Login</a></li>
+          <li><a href="templates/generales/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  
+  </header>
+
+  <main>
+    <section class="hero__index"> <!-- Este es el section de la bienvenida -->
+      <div class="hero__index-header">
+        <picture>
+          <source srcset="img/home/banner_home/banner_home.webp" type="image/webp">  
+          <source srcset="img/home/banner_home/banner_home.jpg" type="image/jpeg">  
+          <img class="hero__index-headerIMG" src="img/home/banner_home/banner_home.jpg" alt="Imagen ordenador home">
+        </picture>
+        <h1>BIENVENIDO A LA MEJOR ACADEMIA ONLINE</h1>
+      </div>
+     
+      <div class="hero__index-content">
+        <p class="introductor">Desarrolla tus habilidades en tecnologías punteras como Desarrollo Web Full Stack, Blockchain, Inteligencia Artificial y Ciberseguridad. <spam class="cursiva">Aprende con los mejores expertos</spam> del sector</p>
+        <div class="hero__index-quienes-somos">
+          <h2>QUIÉNES SOMOS</h2>
+          <figure>
+            <img class="quienes-somos-img" src="img/home/conoce_equipo.jpg" alt="Ilustración conocer equipo">
+          </figure>
+          <p>En Conquer Academy, somos un equipo apasionado por la tecnología, con años de experiencia en áreas como desarrollo de software, análisis de datos y ciberseguridad.</p>
+          <a class="boton-conocenos" href="templates/generales/quienes_somos.html">CONOCER MÁS...</a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="cursos__index"> <!-- Este es el section de los cursos -->
+      <h2>Últimos Cursos</h2>
+      <article class="cursos__index-curso1">
+        <h3>Máster en Desarrollo Web Full Stack</h3>
+        <figure>
+          <img src="img/home/master_fullstack.jpg" alt="Portada de master full stack">
+        </figure>
+        <p>Con nuestro Máster en Desarrollo Web Full Stack, dominarás tanto el Backend (MySQL, Django, Node.js) como el Frontend (HTML5, CSS3, JavaScript, React)</p>
+        <a href="templates/cursos/cursos.html">Ver más</a>
+      </article>
+      <article class="cursos__index-curso2">
+        <h3>Máster en Desarrollo Blockchain</h3>
+        <figure>
+          <img src="img/home/master_blockchain.webp" alt="Portada master Blockchain">
+        </figure>
+        <p>Prepárate para liderar la revolución tecnológica con nuestro Máster en Blockchain. Aprende a desarrollar contratos inteligentes, construir soluciones DeFi y entender el ecosistema criptográfico.</p>
+        <a href="templates/cursos/cursos.html">Ver más</a>
+      </article>
+    </section>
+
+    <section class="blog__index"> <!-- Este es el section de las noticias -->
+      <article class="blog__index-noticia1">
+        <h2>BLOG / Últimas noticias</h2>
+        <h3>España necesitará alrededor de 150.000 programadores en los próximos 10 años</h3>
+        <figure>
+          <img src="img/home/imagen_2_home.jpg" alt="Portada noticia 1">
+        </figure>
+        <p>Según un informe reciente, la demanda de profesionales en programación será clave para cubrir las necesidades del mercado en sectores como fintech, salud y energía.</p>
+        <a href="templates/blog/blog.html">Saber más</a>
+      </article>
+      <article class="blog__index-noticia2">
+        <h3>La ayuda de la IA para los programadores</h3>
+        <figure>
+          <img src="img/home/imagen_noticia2.jpg" alt="Portada noticia 2">
+        </figure>
+        <p>Desde asistentes como ChatGPT hasta sistemas avanzados de análisis de código, la Inteligencia Artificial está marcando un antes y un después en el desarrollo de software, potenciando la productividad de los programadores.</p>
+        <a href="templates/blog/blog.html">Saber más</a>
+      </article>
+    </section>
+  </main>
+
+  <hr class="linea_divisoria-prefooter">
+
+  <footer>
+    <div class="footer__content-principal">
+      <nav class="navbar-secundario">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="templates/generales/quienes_somos.html">Quiénes somos</a></li>
+          <li><a href="templates/cursos/cursos.html">Cursos</a></li>
+          <li><a href="templates/blog/blog.html">Blog</a></li>
+          <li><a href="templates/generales/registro.html">Registro</a></li>
+          <li><a href="templates/generales/login.html">Login</a></li>
+          <li><a href="templates/generales/contacto.html">Contacto</a></li>
+        </ul>
+      </nav> 
+  
+      <nav class="navbar-redes_sociales">
+        <ul>
+          <li><a href=""><img src="img/redes_sociales/instagram.svg" alt="Instagram"></a></li>
+
+          <li><a href=""><img src="img/redes_sociales/linkedin.svg" alt="Linkedin"></a></li>
+          
+          <li><a href=""><img src="img/redes_sociales/facebook.svg" alt="Facebook"></a></li>
+          
+          <li><a href=""><img src="img/redes_sociales/twitter.svg" alt="Twitter"></a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <p>Somos una escuela tech online, con varios años de experiencia en el sector. Si tienes preguntas no dudes en ponerte en contacto con nosotros, te esperamos aqui en CONQUERBLOCKS</p>
+    <p class="footer__aviso">Copyright © 2024 by CONQUERBLOCKS <a href="templates/generales/aviso_legal.html">Aviso legal</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+header {
+    .header__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 15px 20px;
+        background: linear-gradient(to right, #fff, #333);
+        position: relative;
+
+        .logo-conquer {
+            img {
+                width: 200px;
+                background: transparent;
+            }
+        }
+
+        // oculto el checkbox
+        .menu-checkbox {
+            display: none;
+        }
+
+        // toggle hamburguesa
+        .menu-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: $color-verde;
+            border-radius: 8px;
+            border: 2px solid #333;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+            position: relative;
+            z-index: 1100;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+            &:hover {
+                background: $color-verde-oscuro; 
+                transform: scale(1.1);
+            }
+        }
+
+        // Menu principal (oculto por defecto)
+        .navbar-principal {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            z-index: 1000;
+            text-align: center;
+
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s linear;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    text-align: center;
+                }
+
+                a {
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: white;
+                    padding: 10px 20px;
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover,
+                    &.active {
+                        color: $color-verde;
+                    }
+                }
+            }
+        }
+
+        // Mostrar el menú cuando el checkbox está marcado
+        .menu-checkbox:checked + .menu-toggle + .navbar-principal {
+            max-height: 500px;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+    @include breakpoint(tablethorizontal) {
+        .header__container {
+
+            .logo-conquer img {
+                width: 250px;
+            }
+            .menu-toggle {
+                display: none;  
+            }
+
+            .navbar-principal {
+                display: flex;
+                position: static;
+                flex-direction: row;
+                background: transparent;
+                max-height: none;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+
+                ul {
+                    flex-direction: row;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        .header__container {
+            padding: 25px 40px;
+            gap: 32px;
+
+            .logo-conquer img {
+                width: 320px;
+            }
+
+            .menu-toggle {
+                display: none;  
+            }
+
+            .navbar-principal {
+                display: flex;
+                position: static;
+                flex-direction: row;
+                background: transparent;
+                max-height: none;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+
+                ul {
+                    flex-direction: row;
+                    gap: 25px;
+                    a{
+                        padding-left: 10;
+                        padding-right: 10;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint(desktopxl) {
+        .header__container {
+            padding: 30px 80px;
+            gap: 120px;
+
+            .logo-conquer img {
+                width: 400px;
+            }
+
+            .navbar-principal ul {
+                gap: 40px;
+
+                a {
+                    font-size: 20px;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}

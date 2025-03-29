@@ -1,0 +1,125 @@
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+  section.hero-curso1 {
+    background: linear-gradient(to right, $primary-color, $secondary-color);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      @include fade-in(1s);
+    }
+
+    img {
+      max-width: 300px;
+      margin: 1rem auto;
+      border-radius: 1rem;
+      box-shadow: $shadow;
+      @include fade-in(1s, 0.5s);
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 1.5rem auto 0;
+      @include fade-in(1s, 0.7s);
+
+      strong {
+        color: $accent-color;
+      }
+    }
+
+    @include breakpoint(tablet){
+      img{
+        transition: all 0.4s ease-in-out;
+      }
+      img:hover{
+        scale: (1.1);
+      }
+      p{
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  section.info-curso {
+    margin-top: 4rem;
+
+    article {
+      background: $light-color;
+      margin: 2rem 0;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: $shadow;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      @include fade-in(1s);
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      h2,
+      h3 {
+        font-size: 1.8rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+      }
+
+      img {
+        max-width: 100%;
+        margin: 1rem 0;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+      }
+
+      ul {
+        margin-top: 1rem;
+
+
+        li {
+          margin-bottom: 0.5rem;
+          position: relative;
+          padding-left: 1.5rem;
+          list-style: none;
+
+          &::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: $accent-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(tablet){
+      article{
+        margin-bottom: 4rem;
+        transition: all 0.5s ease-in-out;
+      }
+      article:hover{
+        transform: translateY(-8px);
+      }
+      p{
+        font-size: 1.4rem;
+        line-height: 35px;
+      }
+    }
+  }
+
+  
+
+

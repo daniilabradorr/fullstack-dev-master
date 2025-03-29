@@ -1,0 +1,145 @@
+form.formulario {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 80%;
+  justify-self: center;
+  max-width: 600px;
+  margin-top: 20px;
+  margin-left: 8px;
+  margin-right: 8px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* sombra al pasar el cursor */
+      transform: scale(1.02); /* Aumento sutil al pasar el cursor */
+  }
+
+  fieldset {
+      margin-left: 10px;
+      margin-right: 10px;
+      border: none;
+      margin-bottom: 10px;
+
+      legend {
+          font-size: 1.5em;
+          margin-bottom: 10px;
+          color: #333;
+          font-weight: bold;
+          text-transform: uppercase;
+      }
+
+      label {
+          font-size: 1.1em;
+          color: #333;
+          display: block;
+          margin-bottom: 8px;
+          transition: color 0.3s ease;
+      }
+
+      label:hover {
+          color: $color-verde;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="password"],
+      select {
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 15px;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          font-size: 1.1em;
+          background-color: #f9f9f9;
+          transition: all 0.3s ease-in-out;
+      }
+
+      /* Mientras el campo está siendo completado (naranja) */
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus,
+      input[type="date"]:focus,
+      input[type="password"]:focus,
+      select:focus {
+          border-color: orange;
+          background-color: #fff3e0; 
+      }
+
+      /* Para campos correctos (verde) */
+      input[type="text"]:valid,
+      input[type="email"]:valid,
+      input[type="tel"]:valid,
+      input[type="date"]:valid,
+      input[type="password"]:valid,
+      select:valid {
+          border-color: $color-verde;
+          background-color: #e8f5e9; /* Fondo verde claro */
+      }
+
+      /* Para campos con error (rojo) SOLO si han sido tocados */
+      input:invalid:focus,
+      input:invalid:not(:placeholder-shown),
+      select:invalid:focus {
+          border-color: red;
+          background-color: #ffebee; /* Fondo rojo claro */
+      }
+
+      input[type="checkbox"] {
+          margin-right: 8px;
+      }
+
+      &:focus {
+          outline: none;
+      }
+
+      &:last-child {
+          background-color: #f44336;
+      }
+
+      &:last-child:hover {
+          background-color: #d32f2f;
+      }
+  }
+
+  select {
+      height: 150px;
+      font-size: 1.2em;
+      background-color: #f1f1f1;
+      border: 2px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+
+      &:focus {
+          background-color: #f9f9f9;
+          border-color: $color-verde;
+      }
+  }
+
+  input[type="checkbox"]:checked {
+      background-color: #8ce08c;
+      border-color: $color-verde;
+  }
+
+  input[type="checkbox"]:not(:checked) {
+      background-color: #fff;
+  }
+
+  .boton-primary {
+      @include boton-primary;
+      margin-left: 10px;
+      margin-bottom: 10px;
+  }
+  
+  .boton-secondary {
+      @include boton-secondary;
+      margin-bottom: 10px;
+      margin-left: 10px;
+  }
+}

@@ -1,0 +1,175 @@
+$color-exito: #4CAF50;
+$color-error: #f44336;
+$color-fondo-error: #ffebee;
+section.form-contacto{
+
+  h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: $color-exito;
+    text-align: center; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    /* Animación para el h2 */
+    animation: fadeInUp 1s ease-out;
+  }
+
+
+  p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+    /* Animación para el p */
+    animation: fadeInUp 1.2s ease-out;
+  }
+
+  /* animaciones */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  form {
+    background-image: url(./../img/fondo-equipo2.png);
+    background-size: contain;
+    justify-self: center;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  
+    .form-group {
+      margin-bottom: 20px;
+  
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        margin-top: 10px;
+        margin-left: 5px;
+        font-family: $secondary-font;
+        color: $color-verde;
+        font-weight: 900;
+        text-shadow: 4px 4px 8px black;
+      }
+  
+      input,
+      textarea,
+      select {
+        width: 85%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-left: 5px;
+        transition: border-color 0.3s, background-color 0.3s;
+  
+        &:focus {
+          border-color: $color-exito;
+          outline: none;
+        }
+  
+        &:invalid {
+          border-color: $color-error;
+          background-color: $color-fondo-error;
+        }
+      }
+  
+      .error-message {
+        color: $color-error;
+        font-size: 0.9em;
+        margin-top: 4px;
+      }
+    }
+  
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      button {
+        background-color: $color-exito;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 24px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: darken($color-exito, 10%);
+        }
+      }
+    }
+  
+    
+  }
+
+  @include breakpoint(tablet){
+    form {
+      width: 95%;
+      margin-bottom: 20px;
+      .form-group {
+        margin-bottom: 20px;
+    
+        label {
+          font-size: 20px;
+          font-weight: 1000;
+        }
+
+    
+        .error-message {
+          font-size: 1em;
+        }
+      }
+    
+      .form-actions {
+        button {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
+
+  @include breakpoint(tablet){
+    form {
+      width: 90%;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+      .form-group {
+        label {
+          font-size: 30px;
+        }
+
+    
+        .error-message {
+          font-size: 1.2em;
+        }
+      }
+    
+      .form-actions {
+        button {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  
+}

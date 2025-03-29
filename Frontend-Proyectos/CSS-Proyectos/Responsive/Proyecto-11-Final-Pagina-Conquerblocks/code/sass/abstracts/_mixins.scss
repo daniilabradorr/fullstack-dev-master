@@ -1,0 +1,153 @@
+// Mixins de media queries
+@mixin breakpoint($bp) {
+  @if $bp == mobile {
+    @media (max-width: $bp-mobile) {
+      @content;
+    }
+  }
+
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+  @else if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+  @else if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+  @else if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+
+
+@mixin fade-in($duration: 1s, $delay: 0s) {
+  opacity: 0;
+  animation: fadeIn $duration ease-out $delay forwards;
+}
+
+
+// Reset listas
+@mixin reset-list() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+// Botón reutilizable
+@mixin button($bg-color: $color-verde, $color: #ffff) {
+  display: inline-block;
+  background-color: $bg-color;
+  color: $color;
+  padding: 10px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: $secondary-font;
+  width: 200px;
+  text-align: center;
+
+  &:hover {
+    background-color: $color-navbar;
+    color: $color-verde;
+    font-weight: 700;
+  }
+}
+
+
+@mixin button2($bg-color: #ffff, $color: $color-navbar) {
+  display: inline-block;
+  background-color: $bg-color;
+  color: $color;
+  padding: 10px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: $secondary-font;
+  width: 100px;
+  text-align: center;
+
+  &:hover {
+    background-color: $color-verde;
+    color: $color-navbar;
+
+  }
+}
+
+
+@mixin button3($bg-color: $color-navbar, $color: $color-verde) {
+  display: inline-block;
+  background-color: $bg-color;
+  color: $color;
+  padding: 10px 40px;
+  border-radius: 30px;
+  font-weight: 200;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: $secondary-font;
+  width: 100px;
+  text-align: center;
+
+  &:hover {
+    background-color: $color-verde;
+    color: $color-navbar;
+    font-weight: 700;
+  }
+}
+
+@mixin boton-primary {
+  background-color: $color-verde; /* Primer color */
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: lighten($color-verde, 10%);
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Mixin para el segundo botón */
+@mixin boton-secondary {
+  background-color: orange; /* Segundo color */
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: lighten(orange, 10%);
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

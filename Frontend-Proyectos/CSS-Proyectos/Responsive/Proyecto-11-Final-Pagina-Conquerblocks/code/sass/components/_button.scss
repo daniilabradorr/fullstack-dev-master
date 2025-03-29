@@ -1,0 +1,9 @@
+.button{
+    @include button();
+}
+
+a.volver-atras{
+    @include button();
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

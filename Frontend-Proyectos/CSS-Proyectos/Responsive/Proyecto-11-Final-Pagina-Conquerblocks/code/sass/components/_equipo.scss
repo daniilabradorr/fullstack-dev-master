@@ -1,0 +1,124 @@
+section.equipo_quienes-somos {
+    background-image: url(../img/fondo_mundoP.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    margin-top: 0;
+
+    h2 {
+        font-size: 22px;
+        font-weight: 900;
+        text-align: center;
+        padding: 10px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        text-shadow: 2px 4px 8px rgba(255, 255, 255, 0.8);
+        transition: text-shadow, color 0.8s ease-in-out;
+    }
+
+    h2:hover, h2:focus {
+        text-shadow: 2px 4px 8px rgba(64, 184, 12, 0.8);
+        color: #fff;
+    }
+
+    article.equipo1,
+    article.equipo2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-left: 16px;
+        margin-right: 16px;
+
+        figure {
+            transition: transform 0.3s ease;
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(73, 223, 73, 0.6);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                background-image: url(../img/fondo-equipo2.png);
+            }
+
+            figcaption {
+                font-size: 10px;
+                text-align: center;
+                font-weight: 700;
+                color: #ffffff;
+                margin-top: 8px;
+            }
+        }
+
+        // Efecto de enfoque (hover sobre figure)
+        &:hover figure {
+            transform: scale(0.95); // Las no seleccionadas se encogen un poco
+        }
+
+        figure:hover {
+            transform: scale(1.05); // La imagen en hover se agranda
+            img {
+                box-shadow: 0 6px 12px rgba(4, 247, 12, 0.8);
+            }
+        }
+    }
+    padding-bottom: 20px;
+
+
+
+    @include breakpoint(tablet){
+        background-size: cover;
+        h2 {
+        font-size: 28px;
+        }
+
+        article.equipo1,
+        article.equipo2 {
+            figure {
+                figcaption {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(tablethorizontal){
+
+        h2 {
+        font-size: 30px;
+        }
+
+        article.equipo1,
+        article.equipo2 {
+            figure {
+                figcaption {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(desktop){
+        background-size: contain;
+        background-repeat: round;
+        bac
+        h2 {
+            font-size: 32px;
+            }
+    
+            article.equipo1,
+            article.equipo2 {
+                justify-items: center;
+                figure {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img {
+                        width: 70%;
+                        height: auto;
+                        box-shadow: 0 4px 8px rgba(73, 223, 73, 0.7);
+                        background-size: contain;
+                    }
+                }
+            }
+    }
+}

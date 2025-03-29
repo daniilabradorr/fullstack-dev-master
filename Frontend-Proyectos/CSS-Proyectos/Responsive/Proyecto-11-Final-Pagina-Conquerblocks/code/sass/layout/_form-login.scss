@@ -1,0 +1,68 @@
+.formulario-login {
+  background-color: #fff;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    legend {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: $color-navbar;
+    }
+
+    label {
+      font-weight: 600;
+      text-align: left;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: $color-verde;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken($color-verde, 10%);
+      }
+    }
+  }
+}
+
+.secundario-login {
+  margin-top: 20px;
+
+  p {
+    font-size: 0.9rem;
+    color: #fff;
+
+    a {
+      color: $color-verde;
+      text-decoration: underline;
+      transition: color 0.3s;
+
+      &:hover {
+        color: lighten($color-verde, 15%);
+      }
+    }
+  }
+}

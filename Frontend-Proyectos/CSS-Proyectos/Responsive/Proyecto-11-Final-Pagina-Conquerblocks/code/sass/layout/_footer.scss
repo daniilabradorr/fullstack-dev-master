@@ -1,0 +1,184 @@
+footer{
+    background-color: $color-navbar;
+    margin-bottom: 20px;
+    
+    .footer__content-principal{
+        padding-top: 20px;
+
+        .navbar-secundario{
+            display: none;
+        }
+        .navbar-redes_sociales{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            ul{
+                @include reset-list();
+                justify-content: center;
+                align-self: center;
+                align-items: center;
+                align-content: center;
+                gap: 20px;
+                li{
+                    margin: 0;
+                }
+                a{
+                    transition: all 0.3s ease; 
+                    align-items: center;
+                    align-self: center;
+                    img{
+                        width: 45px;
+                    }
+                }
+                a img:hover, a img:focus{
+                    filter: brightness(0) saturate(100%) invert(41%) sepia(85%) saturate(650%) hue-rotate(93deg) brightness(104%) contrast(103%);
+                    transform: scale(1.1);
+                }
+            }
+        }
+            
+    }
+
+    *:nth-child(2){
+        margin-bottom: 10px;
+        font-family: $secondary-font;
+        font-weight: 600;
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 14px;
+        transition: color 0.5s ease-in-out;
+    }
+
+    *:nth-child(2):hover{
+        color: #ffff;
+    }
+
+    .footer__aviso{
+        font-family: $secondary-font;
+        color: #ffff;
+        text-align: center;
+        font-size: 12px;
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: green;
+            border-top: 2px solid $color-verde;
+            border-radius: 30px;
+            border-bottom: 2px solid $color-verde;
+            padding: 10px;
+            width: 100px;
+        }
+        a:visited{
+            display: inline-block;
+            text-decoration: none;
+            color: green;
+            border-bottom: 2px solid $color-verde;
+            padding: 10px;
+            width: 100px;
+        }
+
+        a:active{
+            display: inline-block;
+            text-decoration: none;
+            color: green;
+            border-bottom: 2px solid $color-verde;
+            padding: 10px;
+            width: 100px;
+        }
+
+        a:focus, a:hover{
+            display: inline-block;
+            text-decoration: none;
+            color: #ffff;
+            border-bottom: 2px solid $color-verde;
+            font-size: 14px;
+            padding: 10px;
+            width: 100px;
+        }
+    }
+
+
+    @include breakpoint(tablet){
+        .footer__content-principal{
+            padding-top: 30px;
+    
+            .navbar-secundario {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            
+                ul {
+                    @include reset-list();
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                    margin-bottom: 20px;
+            
+                    li {
+                        margin: 0;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: -15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 1px;
+                            height: 60%;
+                            background-color: lighten($color-verde, 20%);
+                            transition: all 0.3s ease-in-out;
+                        }
+            
+
+                        &:last-child::after {
+                            display: none;
+                        }
+
+                        a:hover + &::after,
+                        &:hover::after {
+                            background-color: darken($color-verde, 10%);
+                            height: 80%;
+                        }
+                    }
+            
+                    a {
+                        text-decoration: none;
+                        color: $color-verde;
+                        font-size: 18px;
+                        transition: all 0.4s ease-in-out;
+                        position: relative;
+            
+                        &:hover {
+                            transform: scale(1.1);
+                            color: #ffff;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            
+                
+            }
+            .navbar-redes_sociales{
+                ul{
+                    gap: 60px;
+                    a{
+                        img{
+                            width: 55px;
+                        }
+                    }
+                }
+            }
+                
+        }
+    
+        *:nth-child(2){
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+    
+
+    }
+

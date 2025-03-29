@@ -1,0 +1,105 @@
+aside {
+    padding-top: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(to right, #fff, #8ce08c);
+    color: white;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    @include fade-in(1s);
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3{
+      color: $color-navbar;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+    }
+
+    button {
+      background: $accent-color;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: $shadow;
+
+      &:hover {
+        background: darken($accent-color, 10%);
+        transform: scale(1.05);
+      }
+    }
+
+
+    @include breakpoint(tablet){
+      border-radius: 0;
+      h2{
+        font-size: 4rem;
+        margin-bottom: 2rem;
+      }
+      h3{
+        padding-top: 10px;
+      }
+
+      p{
+        color: black;
+        text-shadow: 4px 4px 8px #ffff;
+        font-size: 20px;
+        padding-top: 10px;
+        transition: all 0.7s ease-in-out;
+        font-weight: 700;
+      }
+      p:hover{
+        color: $color-verde;
+        font-size: 22px;
+      }
+
+      button{
+        margin-bottom: 20px;
+      }
+    }
+
+
+    @include breakpoint(desktop){
+      border-radius: 0;
+      h2{
+        font-size: 4rem;
+      }
+      h3{
+        font-size: 3rem;
+      }
+
+      p{
+        font-size: 22px;
+        font-weight: 900;
+      }
+      p:hover{
+        font-size: 25px;
+      }
+      
+      img{
+        margin-top: 20px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+      }
+      img:hover{
+        box-shadow: 8px 10px 20px rgba(0, 252, 63, 0.4); 
+        filter: brightness(1.1);
+      }
+
+      button{
+        font-size: 20px;
+      }
+    }
+}
